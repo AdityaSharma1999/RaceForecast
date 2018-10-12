@@ -1,0 +1,568 @@
+
+(base) C:\Users\sharm>conda create -n tensorflow pip python=3.5
+
+CondaValueError: prefix already exists: C:\Users\sharm\Anaconda3\envs\tensorflow
+
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>import tensorflow as tf
+'import' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>pip help install
+
+Usage:
+  pip install [options] <requirement specifier> [package-index-options] ...
+  pip install [options] -r <requirements file> [package-index-options] ...
+  pip install [options] [-e] <vcs project url> ...
+  pip install [options] [-e] <local project path> ...
+  pip install [options] <archive url/path> ...
+
+Description:
+  Install packages from:
+
+  - PyPI (and other indexes) using requirement specifiers.
+  - VCS project urls.
+  - Local project directories.
+  - Local or remote source archives.
+
+  pip also supports installing from "requirements files", which provide
+  an easy way to specify a whole environment to be installed.
+
+Install Options:
+  -c, --constraint <file>     Constrain versions using the given constraints
+                              file. This option can be used multiple times.
+  -e, --editable <path/url>   Install a project in editable mode (i.e.
+                              setuptools "develop mode") from a local project
+                              path or a VCS url.
+  -r, --requirement <file>    Install from the given requirements file. This
+                              option can be used multiple times.
+  -b, --build <dir>           Directory to unpack packages into and build in.
+  -t, --target <dir>          Install packages into <dir>. By default this
+                              will not replace existing files/folders in
+                              <dir>. Use --upgrade to replace existing
+                              packages in <dir> with new versions.
+  -d, --download <dir>        Download packages into <dir> instead of
+                              installing them, regardless of what's already
+                              installed.
+  --src <dir>                 Directory to check out editable projects into.
+                              The default in a virtualenv is "<venv
+                              path>/src". The default for global installs is
+                              "<current dir>/src".
+  -U, --upgrade               Upgrade all specified packages to the newest
+                              available version. The handling of dependencies
+                              depends on the upgrade-strategy used.
+  --upgrade-strategy <upgrade_strategy>
+                              Determines how dependency upgrading should be
+                              handled. "eager" - dependencies are upgraded
+                              regardless of whether the currently installed
+                              version satisfies the requirements of the
+                              upgraded package(s). "only-if-needed" -  are
+                              upgraded only when they do not satisfy the
+                              requirements of the upgraded package(s).
+  --force-reinstall           When upgrading, reinstall all packages even if
+                              they are already up-to-date.
+  -I, --ignore-installed      Ignore the installed packages (reinstalling
+                              instead).
+  --ignore-requires-python    Ignore the Requires-Python information.
+  --no-deps                   Don't install package dependencies.
+  --install-option <options>  Extra arguments to be supplied to the setup.py
+                              install command (use like --install-option="--
+                              install-scripts=/usr/local/bin"). Use multiple
+                              --install-option options to pass multiple
+                              options to setup.py install. If you are using an
+                              option with a directory path, be sure to use
+                              absolute path.
+  --global-option <options>   Extra global options to be supplied to the
+                              setup.py call before the install command.
+  --user                      Install to the Python user install directory for
+                              your platform. Typically ~/.local/, or
+                              %APPDATA%\Python on Windows. (See the Python
+                              documentation for site.USER_BASE for full
+                              details.)
+  --egg                       Install packages as eggs, not 'flat', like pip
+                              normally does. This option is not about
+                              installing *from* eggs. (WARNING: Because this
+                              option overrides pip's normal install logic,
+                              requirements files may not behave as expected.)
+  --root <dir>                Install everything relative to this alternate
+                              root directory.
+  --prefix <dir>              Installation prefix where lib, bin and other
+                              top-level folders are placed
+  --compile                   Compile py files to pyc
+  --no-compile                Do not compile py files to pyc
+  --no-use-wheel              Do not Find and prefer wheel archives when
+                              searching indexes and find-links locations.
+                              DEPRECATED in favour of --no-binary.
+  --no-binary <format_control>
+                              Do not use binary packages. Can be supplied
+                              multiple times, and each time adds to the
+                              existing value. Accepts either :all: to disable
+                              all binary packages, :none: to empty the set, or
+                              one or more package names with commas between
+                              them. Note that some packages are tricky to
+                              compile and may fail to install when this option
+                              is used on them.
+  --only-binary <format_control>
+                              Do not use source packages. Can be supplied
+                              multiple times, and each time adds to the
+                              existing value. Accepts either :all: to disable
+                              all source packages, :none: to empty the set, or
+                              one or more package names with commas between
+                              them. Packages without binary distributions will
+                              fail to install when this option is used on
+                              them.
+  --pre                       Include pre-release and development versions. By
+                              default, pip only finds stable versions.
+  --no-clean                  Don't clean up build directories.
+  --require-hashes            Require a hash to check each requirement
+                              against, for repeatable installs. This option is
+                              implied when any package in a requirements file
+                              has a --hash option.
+
+Package Index Options (including deprecated options):
+  -i, --index-url <url>       Base URL of Python Package Index (default
+                              https://pypi.python.org/simple). This should
+                              point to a repository compliant with PEP 503
+                              (the simple repository API) or a local directory
+                              laid out in the same format.
+  --extra-index-url <url>     Extra URLs of package indexes to use in addition
+                              to --index-url. Should follow the same rules as
+                              --index-url.
+  --no-index                  Ignore package index (only looking at --find-
+                              links URLs instead).
+  -f, --find-links <url>      If a url or path to an html file, then parse for
+                              links to archives. If a local path or file://
+                              url that's a directory, then look for archives
+                              in the directory listing.
+  --process-dependency-links  Enable the processing of dependency links.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+You are using pip version 9.0.1, however version 18.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(base) C:\Users\sharm>python -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/c2/d7/90f34cb0d83a6c5631cf71dfe64cc1054598c843a92b400e55675cc2ac37/pip-18.1-py2.py3-none-any.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 1.1MB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-18.1
+
+(base) C:\Users\sharm>conda install scikit-learn
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.4.10
+  latest version: 4.5.11
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\sharm\Anaconda3
+
+  added / updated specs:
+    - scikit-learn
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    numpy-1.15.2               |   py36ha559c80_0          48 KB
+    numpy-base-1.15.2          |   py36h8128ebf_0         3.9 MB
+    scipy-1.1.0                |   py36h4f6bf74_1        13.6 MB
+    certifi-2018.8.24          |           py36_1         140 KB
+    blas-1.0                   |              mkl           6 KB
+    mkl_random-1.0.1           |   py36h77b88f5_1         268 KB
+    scikit-learn-0.20.0        |   py36heebcf9a_1         5.2 MB
+    mkl_fft-1.0.6              |   py36hdbbee80_0         120 KB
+    mkl-2019.0                 |              118       178.1 MB
+    openssl-1.0.2p             |       hfa6e2cd_0         5.4 MB
+    ca-certificates-2018.03.07 |                0         155 KB
+    ------------------------------------------------------------
+                                           Total:       206.8 MB
+
+The following NEW packages will be INSTALLED:
+
+    blas:            1.0-mkl
+    mkl_fft:         1.0.6-py36hdbbee80_0
+    mkl_random:      1.0.1-py36h77b88f5_1
+    numpy-base:      1.15.2-py36h8128ebf_0
+
+The following packages will be UPDATED:
+
+    ca-certificates: 2017.08.26-h94faf87_0 --> 2018.03.07-0
+    certifi:         2018.1.18-py36_0      --> 2018.8.24-py36_1
+    mkl:             2018.0.1-h2108138_4   --> 2019.0-118
+    numpy:           1.14.0-py36h4a99626_1 --> 1.15.2-py36ha559c80_0
+    openssl:         1.0.2n-h74b6da3_0     --> 1.0.2p-hfa6e2cd_0
+    scikit-learn:    0.19.1-py36h53aea1b_0 --> 0.20.0-py36heebcf9a_1
+    scipy:           1.0.0-py36h1260518_0  --> 1.1.0-py36h4f6bf74_1
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+numpy 1.15.2: ################################################################################################# | 100%
+numpy-base 1.15.2: ############################################################################################ | 100%
+scipy 1.1.0: ################################################################################################## | 100%
+certifi 2018.8.24: ############################################################################################ | 100%
+blas 1.0: ##################################################################################################### | 100%
+mkl_random 1.0.1: ############################################################################################# | 100%
+scikit-learn 0.20.0: ########################################################################################## | 100%
+mkl_fft 1.0.6: ################################################################################################ | 100%
+mkl 2019.0: ################################################################################################### | 100%
+openssl 1.0.2p: ############################################################################################### | 100%
+ca-certificates 2018.03.07: ################################################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(base) C:\Users\sharm>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>conda list
+# packages in environment at C:\Users\sharm\Anaconda3:
+#
+# Name                    Version                   Build  Channel
+_ipyw_jlab_nb_ext_conf    0.1.0            py36he6757f0_0
+alabaster                 0.7.10           py36hcd07829_0
+anaconda                  5.1.0                    py36_2
+anaconda-client           1.6.9                    py36_0
+anaconda-navigator        1.7.0                    py36_0
+anaconda-project          0.8.2            py36hfad2e28_0
+asn1crypto                0.24.0                   py36_0
+astroid                   1.6.1                    py36_0
+astropy                   2.0.3            py36hfa6e2cd_0
+attrs                     17.4.0                   py36_0
+babel                     2.5.3                    py36_0
+backports                 1.0              py36h81696a8_1
+backports.shutil_get_terminal_size 1.0.0            py36h79ab834_2
+beautifulsoup4            4.6.0            py36hd4cc5e8_1
+bitarray                  0.8.1            py36hfa6e2cd_1
+bkcharts                  0.2              py36h7e685f7_0
+blas                      1.0                         mkl
+blaze                     0.11.3           py36h8a29ca5_0
+bleach                    2.1.2                    py36_0
+bokeh                     0.12.13          py36h047fa9f_0
+boto                      2.48.0           py36h1a776d2_1
+bottleneck                1.2.1            py36hd119dfa_0
+bzip2                     1.0.6                hbe05fcf_4
+ca-certificates           2018.03.07                    0
+certifi                   2018.8.24                py36_1
+cffi                      1.11.4           py36hfa6e2cd_0
+chardet                   3.0.4            py36h420ce6e_1
+click                     6.7              py36hec8c647_0
+cloudpickle               0.5.2                    py36_1
+clyent                    1.2.2            py36hb10d595_1
+colorama                  0.3.9            py36h029ae33_0
+comtypes                  1.1.4                    py36_0
+conda                     4.4.10                   py36_0
+conda-build               3.4.1                    py36_0
+conda-env                 2.6.0                h36134e3_1
+conda-verify              2.0.0            py36h065de53_0
+console_shortcut          0.1.1                h6bb2dd7_3
+contextlib2               0.5.5            py36he5d52c0_0
+cryptography              2.1.4            py36he1d7878_0
+curl                      7.58.0               h7602738_0
+cycler                    0.10.0           py36h009560c_0
+cython                    0.27.3           py36h22f4c84_0
+cytoolz                   0.9.0            py36hfa6e2cd_0
+dask                      0.16.1                   py36_0
+dask-core                 0.16.1                   py36_0
+datashape                 0.5.4            py36h5770b85_0
+decorator                 4.2.1                    py36_0
+distributed               1.20.2                   py36_0
+docutils                  0.14             py36h6012d8f_0
+entrypoints               0.2.3            py36hfd66bb0_2
+et_xmlfile                1.0.1            py36h3d2d736_0
+fastcache                 1.0.2            py36hfa6e2cd_2
+filelock                  2.0.13           py36h20000bf_0
+flask                     0.12.2           py36h98b5e8f_0
+flask-cors                3.0.3            py36h8a3855d_0
+freetype                  2.8                  h51f8f2c_1
+get_terminal_size         1.0.0                h38e98db_0
+gevent                    1.2.2            py36h342a76c_0
+glob2                     0.6              py36hdf76b57_0
+greenlet                  0.4.12           py36ha00ad21_0
+h5py                      2.7.1            py36he54a1c3_0
+hdf5                      1.10.1               h98b8871_1
+heapdict                  1.0.0                    py36_2
+html5lib                  1.0.1            py36h047fa9f_0
+icc_rt                    2017.0.4             h97af966_0
+icu                       58.2                 ha66f8fd_1
+idna                      2.6              py36h148d497_1
+imageio                   2.2.0            py36had6c2d2_0
+imagesize                 0.7.1            py36he29f638_0
+intel-openmp              2018.0.0             hd92c6cd_8
+ipykernel                 4.8.0                    py36_0
+ipython                   6.2.1            py36h9cf0123_1
+ipython_genutils          0.2.0            py36h3c5d0ee_0
+ipywidgets                7.1.1                    py36_0
+isort                     4.2.15           py36h6198cc5_0
+itsdangerous              0.24             py36hb6c5a24_1
+jdcal                     1.3              py36h64a5255_0
+jedi                      0.11.1                   py36_0
+jinja2                    2.10             py36h292fed1_0
+jpeg                      9b                   hb83a4c4_2
+jsonschema                2.6.0            py36h7636477_0
+jupyter                   1.0.0                    py36_4
+jupyter_client            5.2.2                    py36_0
+jupyter_console           5.2.0            py36h6d89b47_1
+jupyter_core              4.4.0            py36h56e9d50_0
+jupyterlab                0.31.4                   py36_0
+jupyterlab_launcher       0.10.2                   py36_0
+lazy-object-proxy         1.3.1            py36hd1c21d2_0
+libcurl                   7.58.0               h7602738_0
+libiconv                  1.15                 h1df5818_7
+libpng                    1.6.34               h79bbb47_0
+libssh2                   1.8.0                hd619d38_4
+libtiff                   4.0.9                h0f13578_0
+libxml2                   2.9.7                h79bbb47_0
+libxslt                   1.1.32               hf6f1972_0
+llvmlite                  0.21.0           py36he0b0552_0
+locket                    0.2.0            py36hfed976d_1
+lxml                      4.1.1            py36hef2cd61_1
+lzo                       2.10                 h6df0209_2
+markupsafe                1.0              py36h0e26971_1
+matplotlib                2.1.2            py36h016c42a_0
+mccabe                    0.6.1            py36hb41005a_1
+menuinst                  1.4.11           py36hfa6e2cd_0
+mistune                   0.8.3                    py36_0
+mkl                       2019.0                      118
+mkl-service               1.1.2            py36h57e144c_4
+mkl_fft                   1.0.6            py36hdbbee80_0
+mkl_random                1.0.1            py36h77b88f5_1
+mpmath                    1.0.0            py36hacc8adf_2
+msgpack-python            0.5.1            py36he980bc4_0
+multipledispatch          0.4.9            py36he44c36e_0
+navigator-updater         0.1.0            py36h8a7b86b_0
+nbconvert                 5.3.1            py36h8dc0fde_0
+nbformat                  4.4.0            py36h3a5bc1b_0
+networkx                  2.1                      py36_0
+nltk                      3.2.5            py36h76d52bb_0
+nose                      1.3.7            py36h1c3779e_2
+notebook                  5.4.0                    py36_0
+numba                     0.36.2          np114py36h12cb543_0
+numexpr                   2.6.4            py36h30784b8_0
+numpy                     1.15.2           py36ha559c80_0
+numpy-base                1.15.2           py36h8128ebf_0
+numpydoc                  0.7.0            py36ha25429e_0
+odo                       0.5.1            py36h7560279_0
+olefile                   0.45.1                   py36_0
+openpyxl                  2.4.10                   py36_0
+openssl                   1.0.2p               hfa6e2cd_0
+packaging                 16.8             py36ha0986f6_1
+pandas                    0.22.0           py36h6538335_0
+pandoc                    1.19.2.1             hb2460c7_1
+pandocfilters             1.4.2            py36h3ef6317_1
+parso                     0.1.1            py36hae3edee_0
+partd                     0.3.8            py36hc8e763b_0
+path.py                   10.5             py36h2b94a8f_0
+pathlib2                  2.3.0            py36h7bfb78b_0
+patsy                     0.5.0                    py36_0
+pep8                      1.7.1                    py36_0
+pickleshare               0.7.4            py36h9de030f_0
+pillow                    5.0.0            py36h0738816_0
+pip                       18.1                      <pip>
+pip                       9.0.1            py36h226ae91_4
+pkginfo                   1.4.1            py36hb0f9cfa_1
+pluggy                    0.6.0            py36hc7daf1e_0
+ply                       3.10             py36h1211beb_0
+prompt_toolkit            1.0.15           py36h60b8f86_0
+psutil                    5.4.3            py36hfa6e2cd_0
+py                        1.5.2            py36hbcfbabc_0
+pycodestyle               2.3.1            py36h7cc55cd_0
+pycosat                   0.6.3            py36h413d8a4_0
+pycparser                 2.18             py36hd053e01_1
+pycrypto                  2.6.1            py36hfa6e2cd_7
+pycurl                    7.43.0.1         py36h74b6da3_0
+pyflakes                  1.6.0            py36h0b975d6_0
+pygments                  2.2.0            py36hb010967_0
+pylint                    1.8.2                    py36_0
+pyodbc                    4.0.22           py36h6538335_0
+pyopenssl                 17.5.0           py36h5b7d817_0
+pyparsing                 2.2.0            py36h785a196_1
+pyqt                      5.6.0            py36hb5ed885_5
+pysocks                   1.6.7            py36h698d350_1
+pytables                  3.4.2            py36h71138e3_2
+pytest                    3.3.2                    py36_0
+python                    3.6.4                h6538335_1
+python-dateutil           2.6.1            py36h509ddcb_1
+pytz                      2017.3           py36h1d3fa6b_0
+pywavelets                0.5.2            py36hc649158_0
+pywin32                   222              py36hfa6e2cd_0
+pywinpty                  0.5              py36h6538335_1
+pyyaml                    3.12             py36h1d1928f_1
+pyzmq                     16.0.3           py36he714bf5_0
+qt                        5.6.2           vc14h6f8c307_12  [vc14]
+qtawesome                 0.4.4            py36h5aa48f6_0
+qtconsole                 4.3.1            py36h99a29a9_0
+qtpy                      1.3.1            py36hb8717c5_0
+requests                  2.18.4           py36h4371aae_1
+rope                      0.10.7           py36had63a69_0
+ruamel_yaml               0.15.35          py36hfa6e2cd_1
+scikit-image              0.13.1           py36hfa6e2cd_1
+scikit-learn              0.20.0           py36heebcf9a_1
+scipy                     1.1.0            py36h4f6bf74_1
+seaborn                   0.8.1            py36h9b69545_0
+send2trash                1.4.2                    py36_0
+setuptools                38.4.0                   py36_0
+simplegeneric             0.8.1                    py36_2
+singledispatch            3.4.0.3          py36h17d0c80_0
+sip                       4.18.1           py36h9c25514_2
+six                       1.11.0           py36h4db2310_1
+snowballstemmer           1.2.1            py36h763602f_0
+sortedcollections         0.5.3            py36hbefa0ab_0
+sortedcontainers          1.5.9                    py36_0
+sphinx                    1.6.6                    py36_0
+sphinxcontrib             1.0              py36hbbac3d2_1
+sphinxcontrib-websupport  1.0.1            py36hb5e5916_1
+spyder                    3.2.6                    py36_0
+sqlalchemy                1.2.1            py36hfa6e2cd_0
+sqlite                    3.22.0               h9d3ae62_0
+statsmodels               0.8.0            py36h6189b4c_0
+sympy                     1.1.1            py36h96708e0_0
+tblib                     1.3.2            py36h30f5020_0
+terminado                 0.8.1                    py36_1
+testpath                  0.3.1            py36h2698cfe_0
+tk                        8.6.7                hcb92d03_3
+toolz                     0.9.0                    py36_0
+tornado                   4.5.3                    py36_0
+traitlets                 4.3.2            py36h096827d_0
+typing                    3.6.2            py36hb035bda_0
+unicodecsv                0.14.1           py36h6450c06_0
+urllib3                   1.22             py36h276f60a_0
+vc                        14                   h0510ff6_3
+vs2015_runtime            14.0.25123                    3
+wcwidth                   0.1.7            py36h3d5aa90_0
+webencodings              0.5.1            py36h67c50ae_1
+werkzeug                  0.14.1                   py36_0
+wheel                     0.30.0           py36h6c3ec14_1
+widgetsnbextension        3.1.0                    py36_0
+win_inet_pton             1.0.1            py36he67d7fd_1
+win_unicode_console       0.5              py36hcdbd4b5_0
+wincertstore              0.2              py36h7fe50ca_0
+winpty                    0.4.3                         4
+wrapt                     1.10.11          py36he5f5981_0
+xlrd                      1.1.0            py36h1cb58dc_1
+xlsxwriter                1.0.2            py36hf723b7d_0
+xlwings                   0.11.5                   py36_0
+xlwt                      1.3.0            py36h1a4751e_0
+yaml                      0.1.7                hc54c509_2
+zict                      0.1.3            py36h2d8e73e_0
+zlib                      1.2.11               h8395fce_2
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>(base) C:\Users\sharm>conda create -n tensorflow pip python=3.5
+C:\Users\sharm was unexpected at this time.
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>CondaValueError: prefix already exists: C:\Users\sharm\Anaconda3\envs\tensorflow
+'CondaValueError:' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>(base) C:\Users\sharm>
+C:\Users\sharm was unexpected at this time.
+(base) C:\Users\sharm>(base) C:\Users\sharm>import tensorflow as tf
+C:\Users\sharm was unexpected at this time.
+(base) C:\Users\sharm>'import' is not recognized as an internal or external command,
+''import'' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>operable program or batch file.
+'operable' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>(base) C:\Users\sharm>pip help install
+C:\Users\sharm was unexpected at this time.
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>Usage:
+'Usage:' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>  pip install [options] <requirement specifier> [package-index-options] ...
+The system cannot find the file specified.
+
+(base) C:\Users\sharm>  pip install [options] -r <requirements file> [package-index-options] ...
+The system cannot find the file specified.
+
+(base) C:\Users\sharm>  pip install [options] [-e] <vcs project url> ...
+The system cannot find the file specified.
+
+(base) C:\Users\sharm>  pip install [options] [-e] <local project path> ...
+The system cannot find the file specified.
+
+(base) C:\Users\sharm>  pip install [options] <archive url/path> ...
+The system cannot find the file specified.
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>Description:
+'Description:' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>  Install packages from:
+'Install' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>  - PyPI (and other indexes) using requirement specifiers.
+'-' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>  - VCS project urls.
+'-' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>  - Local project directories.
+'-' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>  - Local or remote source archives.
+'-' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\sharm>
+(base) C:\Users\sharm>  pip also supports installing from "requirements files", which provide
+E
